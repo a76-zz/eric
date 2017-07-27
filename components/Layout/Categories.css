@@ -1,0 +1,42 @@
+:root {
+    --font: 'Arial Narrow',Arial,sans-serif;
+}
+
+.title {
+    font-size: 15px;
+    color: #777;
+    font-family: var(--font);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sidebar {
+    width: 252px;
+    float: left;
+    min-height: 1px;
+    padding-top: 60px;
+}
+
+.list {
+    padding-top: 18px;
+}
+
+.item {
+    display: block;
+    padding-top: 0px;
+    padding-bottom: 7px;
+    padding-right: 40px;
+}
+
+.item > a {
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 14px;
+    color: #222;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+.item > a:hover {
+    color: #967810;
+}

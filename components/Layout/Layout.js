@@ -1,13 +1,17 @@
 import React, { PropTypes } from 'react'
 import Header from './Header'
+import Categories from './Categories'
 import s from './Layout.css'
 
 const Layout = ({children}) => (
   <div>
     <Header />
-    <main>
-      {children}
-    </main>
+    <div className={s.content}>
+      <Categories />
+      <main>
+        {children}
+      </main>
+    </div>
   </div>
 )
 

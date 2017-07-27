@@ -4,10 +4,11 @@
 
 .title {
     font-size: 15px;
-    color: #777;
+    color: #999;
     font-family: var(--font);
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .sidebar {
@@ -24,7 +25,7 @@
 .item {
     display: block;
     padding-top: 0px;
-    padding-bottom: 7px;
+    padding-bottom: 10px;
     padding-right: 40px;
 }
 
@@ -34,9 +35,14 @@
     font-size: 14px;
     color: #222;
     cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
+    letter-spacing: 0.08em; 
 }
 
 .item > a:hover {
+    color: #967810;
+}
+
+.active > a {
     color: #967810;
 }

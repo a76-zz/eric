@@ -1,0 +1,94 @@
+:root {
+    --font: arial, sans-serif, sans;
+    --spacing: 0.08em;
+    --font-size: 12px;
+    --font-size-large: 24px;
+    
+    --font-weight: 700;
+    --light: #999;
+    --normal: #222;
+    --title: #505961;
+    --selected: #967810;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.header > div {
+    vertical-align: top;
+}
+
+.breadcrumbs {
+    font-size: var(--font-size);
+    color: var(--light);
+    text-transform: uppercase;
+
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--spacing);
+
+    text-transform: uppercase;
+}
+
+.breadcrumbs > a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+.breadcrumbs > a:hover {
+    color: var(--selected);
+}
+
+.title {
+    font-size: var(--font-size-large);
+    color: var(--title);
+
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    text-rendering: optimizeLegibility;
+    padding-top: 10px;
+}
+
+.options {
+    vertical-align: top;
+}
+
+.option {
+    display: inline-block;
+    padding-right: 20px;
+
+    font-size: var(--font-size);
+    color: var(--normal);
+
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--spacing);
+    text-transform: uppercase;
+}
+
+.option > i {
+    font-size: var(--font-size);
+    vertical-align: bottom;
+}
+
+.option-name {
+    margin-right: 5px;
+}
+
+.option > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--normal);
+}
+
+.option > a:hover {
+    color: var(--selected);
+}
+
+.active {
+    color: var(--selected);
+}

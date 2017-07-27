@@ -1,14 +1,23 @@
 :root {
-    --font: 'Arial Narrow',Arial,sans-serif;
+    --font: arial, sans-serif, sans;
+    --spacing: 0.08em;
+    --font-size: 11px;
+    --font-size-large: 15px;
+
+    --font-weight: 700;
+    --light: #999;
+    --normal: #222;
+    --selected: #967810;
 }
 
 .title {
-    font-size: 15px;
-    color: #999;
-    font-family: var(--font);
-    font-weight: 700;
+    font-size: var(--font-size-large);
+    color: var(--light);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--spacing);
 }
 
 .sidebar {
@@ -30,19 +39,22 @@
 }
 
 .item > a {
-    font-family: var(--font);
-    font-weight: 700;
-    font-size: 14px;
-    color: #222;
+    font-size: var(--font-size);
+    color: var(--normal);
+    text-transform: uppercase;
+
     cursor: pointer;
     text-decoration: none;
-    letter-spacing: 0.08em; 
+
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--spacing);
 }
 
 .item > a:hover {
-    color: #967810;
+    color: var(--selected);
 }
 
 .active > a {
-    color: #967810;
+    color: var(--selected);
 }

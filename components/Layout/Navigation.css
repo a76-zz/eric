@@ -1,5 +1,11 @@
 :root {
     --font: arial, sans-serif, sans;
+    --spacing: 0.08em;
+    --font-size: 14px;
+    --font-weight: 700;
+
+    --normal: #222;
+    --selected: #967810;
 }
 
 .navigation {
@@ -17,16 +23,19 @@
     padding-right: 40px;
 }
 
-.item > a {
-    font-family: var(--font);
-    font-weight: 700;
-    font-size: 14px;
-    color: #000;
-    letter-spacing: 0.08em;
+.item > a { 
+    font-size: var(--font-size);
+    color: var(--normal);
+    text-transform: uppercase;
+
     cursor: pointer;
     text-decoration: none;  
+
+    font-family: var(--font);
+    font-weight: var(--font-weight);
+    letter-spacing: var(--spacing);
 }
 
 .item > a:hover {
-    color: #967810;
+    color: var(--selected);
 }

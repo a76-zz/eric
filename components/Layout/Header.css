@@ -1,7 +1,11 @@
+:root {
+  --logo-color: #777;
+}
+
 .shell {
   padding-top: 25px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  background-color: #fff;
 }
 
 .content {
@@ -20,7 +24,7 @@
 
 .logo > a {
   font-family: 'Arial Narrow',Arial,sans-serif;
-  color: #777;
+  color: var(--logo-color);
   font-weight: 700;
   
   font-size: 38px;

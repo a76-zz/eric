@@ -1,0 +1,33 @@
+:root {
+    --font: arial, sans-serif, sans;
+    --spacing: 0.15em;
+}
+
+.navigation {
+    display: inline-block;
+}
+
+.list {
+    padding-top: 18px;
+}
+
+.item {
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+}
+
+.item > a {
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    text-decoration: none;  
+}
+
+.item > a:hover {
+    color: #967810;
+}

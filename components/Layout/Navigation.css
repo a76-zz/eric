@@ -1,8 +1,8 @@
 :root {
     --font: arial, sans-serif, sans;
-    --spacing: 0.08em;
-    --font-size: 14px;
-    --font-weight: 700;
+    --spacing: 0em;
+    --font-size: 16px;
+    --font-weight: normal;
 
     --normal: #222;
     --selected: #967810;
@@ -26,7 +26,6 @@
 .item > a { 
     font-size: var(--font-size);
     color: var(--normal);
-    text-transform: uppercase;
 
     cursor: pointer;
     text-decoration: none;  

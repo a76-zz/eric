@@ -1,10 +1,10 @@
 :root {
     --font: arial, sans-serif, sans;
-    --spacing: 0.08em;
-    --font-size: 11px;
-    --font-size-large: 15px;
+    --spacing: 0em;
+    --font-size: 14px;
+    --font-size-large: 12px;
 
-    --font-weight: 700;
+    --font-weight: normal;
     --light: #999;
     --normal: #222;
     --selected: #967810;
@@ -13,8 +13,8 @@
 .title {
     font-size: var(--font-size-large);
     color: var(--light);
+    
     text-transform: uppercase;
-
     font-family: var(--font);
     font-weight: var(--font-weight);
     letter-spacing: var(--spacing);
@@ -28,20 +28,19 @@
 }
 
 .list {
-    padding-top: 18px;
+    padding-top: 25px;
 }
 
 .item {
     display: block;
     padding-top: 0px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     padding-right: 40px;
 }
 
 .item > a {
     font-size: var(--font-size);
     color: var(--normal);
-    text-transform: uppercase;
 
     cursor: pointer;
     text-decoration: none;

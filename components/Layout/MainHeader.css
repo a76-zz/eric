@@ -1,10 +1,11 @@
 :root {
     --font: arial, sans-serif, sans;
-    --spacing: 0.08em;
+    --spacing: 0em;
+    --map-size: 12px;
     --font-size: 12px;
     --font-size-large: 24px;
     
-    --font-weight: 700;
+    --font-weight: normal;
     --light: #999;
     --normal: #222;
     --title: #505961;
@@ -23,9 +24,8 @@
 }
 
 .breadcrumbs {
-    font-size: var(--font-size);
+    font-size: var(--map-size);
     color: var(--light);
-    text-transform: uppercase;
 
     font-family: var(--font);
     font-weight: var(--font-weight);
@@ -48,7 +48,7 @@
     color: var(--title);
 
     font-family: var(--font);
-    font-weight: var(--font-weight);
+    font-weight: bold;
     text-rendering: optimizeLegibility;
     padding-top: 10px;
 }

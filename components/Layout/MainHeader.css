@@ -7,7 +7,7 @@
     
     --font-weight: normal;
     --light: #999;
-    --normal: #222;
+    --normal: #555;
     --title: #505961;
     --selected: #967810;
 }
@@ -15,8 +15,8 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 15px;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 .header > div {
@@ -55,6 +55,7 @@
 
 .options {
     vertical-align: top;
+    display: none;
 }
 
 .option {

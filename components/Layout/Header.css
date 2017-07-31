@@ -1,5 +1,7 @@
 :root {
   --logo-color: #777;
+  --padding: 50px;
+  --width: 1390px;
 }
 
 .shell {
@@ -11,9 +13,9 @@
 .content {
   display: flex;
   justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 1390px;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  max-width: var(--width);
   margin: auto;
 }
 
@@ -23,7 +25,7 @@
 }
 
 .logo > a {
-  font-family: 'Arial Narrow',Arial,sans-serif;
+  font-family: 'Arial Narrow',arial,sans-serif;
   color: var(--logo-color);
   font-weight: 700;
   

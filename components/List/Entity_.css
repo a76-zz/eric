@@ -1,0 +1,77 @@
+:root {
+  --font: Helvetica, arial, sans-serif, sans;
+  --spacing: 0em;
+  --font-size: 14px;
+  --font-size-duration: 10px;
+  --size-title: 14px;
+  --size-channel: 13px;
+  --size-description: 12px;
+
+  --font-weight: normal;
+  --light: #777;
+  --normal: #222;
+  --selected: #967810;
+  --duration: #eee;
+  --duration-background: #222;
+  --title: #366ad9;
+  --title-spacing: 0.05em;
+  --background: #fff;
+}
+
+.entity {
+  display: inline-block;
+  width: 246px;
+  font-family: var(--font);
+  background-color: var(--background);
+  border: 10px solid var(--background);
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.thumb {
+  position: relative;
+  
+}
+
+.duration {
+  
+  position: absolute;
+  background-color: var(--duration-background);
+
+  font-size: var(--font-size-duration);
+  color: var(--duration);
+  display: block;
+  padding: 3px;
+  right: 5px;
+  bottom: 5px;
+}
+
+
+.title > a {
+
+  font-size: var(--size-title);
+  
+  color: var(--title);
+  font-weight: 300;
+  line-height: 1.3em;
+
+  text-decoration: none;
+
+}
+
+.channel {
+  font-size: var(--size-channel);
+  color: var(--light);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+
+}
+
+.description {
+  font-size: var(--size-description);
+  color: var(--light);
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+

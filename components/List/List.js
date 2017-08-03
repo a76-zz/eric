@@ -5,6 +5,7 @@ import s from './List.css'
 
 const List = () => (
   <div>
+    
   <Entity 
     poster={{
       src: '/mock/posters/bbc_theresa_may.jpg', 

@@ -1,4 +1,5 @@
-export default [
+export default {
+  you: [
   {
     poster: {
       src: '/mock/posters/bbc-theresa-may.jpg', 
@@ -20,4 +21,4 @@ export default [
     }
 
   }
-]
+]}

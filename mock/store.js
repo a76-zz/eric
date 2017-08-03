@@ -1,14 +1,15 @@
 import { createStore } from 'redux'
+import list from './list'
 
 
 const store = createStore((state, action) => {
   // TODO: Add action handlers (aka "reduces")
   switch (action) {
     case 'COUNT':
-      return { ...state, count: (state.count || 0) + 1 }
+      return { ...state, count: (state.count || 0) + 1 };
     default:
-      return state
+      return state;
   }
-})
+});
 
-export default store
+export default store;

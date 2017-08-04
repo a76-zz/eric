@@ -1,8 +1,7 @@
-import * as config from '../config'
-const { messageTypes } = config
+import { messageTypes } from 'eric-config'
 
-export function startUp() {
+export function sync() {
   return (dispatch, getState, {emit}) => {
-    emit(messageTypes.stateRequested)
+    emit(messageTypes.sync)
   }
 }

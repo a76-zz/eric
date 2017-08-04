@@ -2447,6 +2447,10 @@ entities@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.1.tgz#6e5c2d0a5621b5dadaecef80b90edfb5cd7772f0"
 
+"eric-config@https://github.com/a76/eric-config.git":
+  version "1.0.0"
+  resolved "https://github.com/a76/eric-config.git#db112c4d969fb54d8f551d9e2dde18edd2eff50a"
+
 err-code@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/err-code/-/err-code-1.1.2.tgz#06e0116d3028f6aef4806849eb0ea6a748ae6960"

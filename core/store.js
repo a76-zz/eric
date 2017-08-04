@@ -1,14 +1,26 @@
 import { createStore } from 'redux'
+import { init as websocketInit, emit } from './actions/websocket'
 
+import { createStore, applyMiddleware } from 'redux'
+import thunkMiddleware from 'redux-thunk'
+import createLogger from 'redux-logger'
+import rootReducer from './../reducers'
+import { Map } from 'immutable'
 
-const store = createStore((state, action) => {
-  // TODO: Add action handlers (aka "reduces")
-  switch (action) {
-    case 'COUNT':
-      return { ...state, count: (state.count || 0) + 1 }
-    default:
-      return state
+function initStore () {
+  const middleware = [ thunkMiddleware.withExtraArgument({ emit }) ]
+  // use the logger in development mode - this is set in webpack.config.dev.js
+  if (__DEV__) {
+    middleware.push(createLogger())
   }
-})
 
+  const setup = applyMiddleware(...middleware)(createStore)
+
+  const store = setup(rootReducer, new Map())
+  websocketInit(store) // setup websocket listeners etc
+
+  return store
+}
+
+const store = initStore()
 export default store

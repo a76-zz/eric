@@ -6,9 +6,10 @@ import ReactDOM from 'react-dom'
 import FastClick from 'fastclick'
 import { Provider } from 'react-redux'
 
-import store from './core/store'
+import initStore from './core/store'
 import router from './core/router'
 import history from './core/history'
+import App from './components/Core/App'
 
 import s from './main.css'
 
@@ -17,8 +18,10 @@ let routes = require('./routes.json') // Loaded with utils/routes-loader.js
 function renderComponent(component) {
   const container = document.getElementById('container')
   ReactDOM.render(
-    <Provider store={store}>
-      {component}
+    <Provider store={initStore()}>
+      <App>
+         {component}
+      </App>
     </Provider>,
     container
   )

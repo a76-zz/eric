@@ -2453,7 +2453,7 @@ entities@~1.1.1:
 
 "eric-config@https://github.com/a76/eric-config.git":
   version "1.0.0"
-  resolved "https://github.com/a76/eric-config.git#db112c4d969fb54d8f551d9e2dde18edd2eff50a"
+  resolved "https://github.com/a76/eric-config.git#f436f1cce711ab9530fc55a8175cdba280b6980c"
 
 err-code@^1.0.0:
   version "1.1.2"

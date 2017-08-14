@@ -19,7 +19,9 @@ class App extends Component {
 
   render () {
     return (
-      {children}
+      <div>
+        {this.props.children}
+      </div>
     )
   }
 }

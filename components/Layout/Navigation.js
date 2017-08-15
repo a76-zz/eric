@@ -2,20 +2,26 @@ import React from 'react'
 import Link from '../Link'
 import s from './Navigation.css'
 
-const Navigation = () => (
-  <nav className={s.navigation}>
-    <ul className={s.list}>
-      <li className={s.item}>
-        <Link to="">You</Link>
-      </li>
-      <li className={s.item}>
-        <Link to="">Live Tv</Link>
-      </li>
-      <li className={s.item}>
-        <Link to="/about">On Demand</Link>
-      </li>
-    </ul>
-  </nav>
-)
+const Navigation = ({hubs}) => {
+  let hubsUi = null
+
+  if (hubs && hubs.size > 0) {
+    hubsUi = hubs.map(hub => {
+      return (
+        <li className={s.item}>
+          <Link to="">{hub.get('title')}</Link>
+        </li>
+      )
+    })
+  }
+
+  return (
+    <nav className={s.navigation}>
+      <ul className={s.list}>
+        {hubsUi}
+      </ul>
+    </nav>
+  )
+}
 
 export default Navigation

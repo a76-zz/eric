@@ -3,14 +3,14 @@ import Link from '../Link'
 import Navigation from './Navigation'
 import s from './Header.css'
 
-const Header = () => (
+const Header = ({ hubs }) => (
   <div className={s.shell}>
     <header className={s.content}>
       <div>
         <div className={s.logo}>
           <Link to="/">Digital Television</Link>
         </div>
-        <Navigation />
+        <Navigation hubs={hubs} />
       </div>
       <div className={s.menu}>
         <Link to="">

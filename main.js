@@ -12,7 +12,6 @@ import history from './core/history'
 import App from './components/Core/App'
 
 import s from './main.css'
-
 let routes = require('./routes.json') // Loaded with utils/routes-loader.js
 
 function renderComponent(component) {
@@ -27,12 +26,8 @@ function renderComponent(component) {
   )
 }
 
-// Find and render a web page matching the current URL path,
-// if such page is not found then render an error page (see routes.json, core/router.js)
 function render(location) {
-  router.resolve(routes, location)
-    .then(renderComponent)
-    .catch(error => router.resolve(routes, { ...location, error }).then(renderComponent))
+  return router.render(routes, location, renderComponent)
 }
 
 // Handle client-side navigation by using HTML5 History API

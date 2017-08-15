@@ -16,5 +16,15 @@
   {
     "path": "/tasks/:status(pending|completed)?",
     "page": "./pages/home"
+  },
+  {
+    "id": "hub",
+    "path": "/:hub",
+    "page": "./pages/feed"
+  },
+  {
+    "id": "feed",
+    "path": "/:hub/:feed",
+    "page": "./pages/feed"
   }
 ]

@@ -4,14 +4,12 @@ import List from '../../components/List'
 import s from './styles.css'
 
 
-const HomePage = (route) => {
-  console.log(route)
-
+const FeedPage = (route) => {
   return (
-    <Layout>
+    <Layout route={route}>
       <List />
     </Layout>
   )
 }
 
-export default HomePage
+export default FeedPage

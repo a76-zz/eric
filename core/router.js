@@ -1,14 +1,4 @@
-/**
- * React Static Boilerplate
- * https://github.com/kriasoft/react-static-boilerplate
- *
- * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
-import React from 'react';
+import React from 'react'
 
 function decodeParam(val) {
   if (!(typeof val === 'string' || val.length === 0)) {
@@ -84,4 +74,34 @@ function resolve(routes, context) {
   return Promise.reject(error);
 }
 
-export default { resolve };
+// Resolve path defined as pattern to actual location, for example:
+// { path: '/tasks/:id', params: {id: 'load'}} returns /tasks/load
+function resolvePath(path, params) {
+  let result = path
+  for (const key of Object.keys(params)) {
+    result = result.replace(`:${key}`, params[key])
+  }
+
+  return result
+}
+
+// Resolve route by id and return location according to the route's path and parameters
+function resolveRoute(id, params) {
+  const route = routes.find(route => route.id === id)
+
+  if (route) {
+    return resolvePath(route.path, params)
+  } else {
+    throw new Error(`Route not found by id '${id}'`)
+  }
+}
+
+// Find and render a web page matching the current URL path,
+// if such page is not found then render an error page (see routes.json, core/router.js)
+function render(routes, location, renderComponent) {
+  resolve(routes, location)
+    .then(renderComponent)
+    .catch(error => resolve(routes, { ...location, error }).then(renderComponent))
+}
+
+export default { resolve, resolveRoute, render };

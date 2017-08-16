@@ -8,16 +8,27 @@ import { Provider } from 'react-redux'
 
 import initStore from './core/store'
 import router from './core/router'
+import { routes as activeRoutes, reloadRoutes } from './routes'
 import history from './core/history'
 import App from './components/Core/App'
 
 import s from './main.css'
-let routes = require('./routes.json') // Loaded with utils/routes-loader.js
+
+let store = undefined
+let routes = activeRoutes
+
+function getStore() {
+  if (!store) {
+    store = initStore()
+  }
+
+  return store
+}
 
 function renderComponent(component) {
   const container = document.getElementById('container')
   ReactDOM.render(
-    <Provider store={initStore()}>
+    <Provider store={getStore()}>
       <App>
          {component}
       </App>
@@ -26,8 +37,12 @@ function renderComponent(component) {
   )
 }
 
+// Find and render a web page matching the current URL path,
+// if such page is not found then render an error page (see routes.json, core/router.js)
 function render(location) {
-  return router.render(routes, location, renderComponent)
+  router.resolve(routes, location)
+    .then(renderComponent)
+    .catch(error => router.resolve(routes, { ...location, error }).then(renderComponent))
 }
 
 // Handle client-side navigation by using HTML5 History API
@@ -43,7 +58,7 @@ FastClick.attach(document.body)
 // Enable Hot Module Replacement (HMR)
 if (module.hot) {
   module.hot.accept('./routes.json', () => {
-    routes = require('./routes.json') // eslint-disable-line global-require
+    routes = reloadRotes(); // eslint-disable-line global-require
     render(history.getCurrentLocation())
   })
 }

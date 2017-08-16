@@ -66,7 +66,7 @@ function resolve(routes, context) {
       });
     }
 
-    return route.load().then(Page => <Page route={route} error={context.error} />);
+    return route.load().then(Page => <Page route={route} params={params} error={context.error} />);
   }
 
   const error = new Error('Page not found');
@@ -74,34 +74,4 @@ function resolve(routes, context) {
   return Promise.reject(error);
 }
 
-// Resolve path defined as pattern to actual location, for example:
-// { path: '/tasks/:id', params: {id: 'load'}} returns /tasks/load
-function resolvePath(path, params) {
-  let result = path
-  for (const key of Object.keys(params)) {
-    result = result.replace(`:${key}`, params[key])
-  }
-
-  return result
-}
-
-// Resolve route by id and return location according to the route's path and parameters
-function resolveRoute(id, params) {
-  const route = routes.find(route => route.id === id)
-
-  if (route) {
-    return resolvePath(route.path, params)
-  } else {
-    throw new Error(`Route not found by id '${id}'`)
-  }
-}
-
-// Find and render a web page matching the current URL path,
-// if such page is not found then render an error page (see routes.json, core/router.js)
-function render(routes, location, renderComponent) {
-  resolve(routes, location)
-    .then(renderComponent)
-    .catch(error => resolve(routes, { ...location, error }).then(renderComponent))
-}
-
-export default { resolve, resolveRoute, render };
+export default { resolve }

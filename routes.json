@@ -19,12 +19,12 @@
   },
   {
     "id": "hub",
-    "path": "/:hub",
+    "path": "/:hubId",
     "page": "./pages/feed"
   },
   {
     "id": "feed",
-    "path": "/:hub/:feed",
+    "path": "/:hubId/:feedId",
     "page": "./pages/feed"
   }
 ]

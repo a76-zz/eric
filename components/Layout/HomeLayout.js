@@ -1,20 +1,14 @@
 import React, { PropTypes } from 'react'
 import Header from './Header'
-import Categories from './Categories'
-import MainHeader from './MainHeader'
 import s from './Layout.css'
 import { connect } from 'react-redux'
 
-const Layout = ({route, hubs, feeds, hub, feed, children}) => {
-  console.log(hubs);
+const HomeLayout = ({hubs, children}) => {
   return (
     <div>
       <Header hubs={hubs} />
       <div className={s.content}>
-        <Categories />
         <main>
-          <MainHeader />
-
           {children}
         </main>
       </div>
@@ -26,11 +20,10 @@ function mapStateToProps (state) {
   const cloud = state.get('cloud')
 
   return {
-    hubs: cloud.get('hubs'),
-    feeds: cloud.get('feeds')
+    hubs: cloud.get('hubs')
   }
 }
 
 export default connect(
   mapStateToProps
-)(Layout)
+)(HomeLayout)

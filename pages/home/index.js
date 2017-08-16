@@ -1,16 +1,11 @@
 import React, { PropTypes } from 'react'
-import Layout from '../../components/Layout'
-import List from '../../components/List'
+import HomeLayout from '../../components/Layout/HomeLayout'
 import s from './styles.css'
 
-
-const HomePage = (route) => {
-  console.log(route)
-
+const HomePage = () => {
   return (
-    <Layout>
-      <List />
-    </Layout>
+    <HomeLayout>
+    </HomeLayout>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import FeedLayout from '../../components/Layout/FeedLayout'
-import List from '../../components/List'
+import FeedList from '../../components/FeedList'
 import s from './styles.css'
 
 const FeedPage = ({params}) => {
@@ -8,7 +8,7 @@ const FeedPage = ({params}) => {
 
   return (
     <FeedLayout hubId={hubId} feedId={feedId}>
-      <List />
+      <FeedList hubId={hubId} feedId={feedId} />
     </FeedLayout>
   )
 }

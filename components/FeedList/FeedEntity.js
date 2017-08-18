@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from '../Link'
-import s from './Entity_.css'
+import s from './FeedEntity.css'
 
-const Entity = ({poster: {src, width, height}, item: {uri, title, description, duration: {hh, mm, ss}, channel: {name }}}) => (
+const FeedEntity = ({poster: {src, width, height}, item: {uri, title, description, duration: {hh, mm, ss}, channel: {name }}}) => (
   <div className={s.entity}>
     <div className={s.thumbnail}>
       <Link to={uri}>
@@ -23,4 +23,4 @@ const Entity = ({poster: {src, width, height}, item: {uri, title, description, d
   </div>
 )
 
-export default Entity
+export default FeedEntity

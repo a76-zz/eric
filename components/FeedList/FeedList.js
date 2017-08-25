@@ -12,31 +12,11 @@ const FeedList = ({hubId, feedId, hubs, feeds, videos, posters, channels }) => {
 
     const feedUi = ids.map(id => {
       const video = videos.get(id)
+      const poster = posters.get(video.get('poster'))
       const channel = channels.get(video.get('channel'))
 
-      const posterMap = posters.get(video.get('poster'))
-
-      const item = {
-        uri: video.get('uri'),
-        title: video.get('title'),
-        description: video.get('description'),
-        duration: {
-          mm: video.getIn(['duration', 'mm']),
-          ss: video.getIn(['duration', 'ss'])
-        },
-        channel: {
-          name: channel.get('name')
-        }
-      }
-
-      const poster = {
-        src: posterMap.get('src'),
-        width: posterMap.get('width'),
-        height: posterMap.get('height')
-      }
-
       return (
-        <FeedEntity poster={poster} item={item} />
+        <FeedEntity video={video} poster={poster} channel={channel} />
       )
     })
 

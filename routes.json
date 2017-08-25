@@ -18,7 +18,7 @@
     "page": "./pages/home"
   },
   {
-    "path": "/playback",
+    "path": "/playback/:videoId",
     "page": "./pages/playback"
   },
   {

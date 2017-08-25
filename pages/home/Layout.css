@@ -1,0 +1,11 @@
+:root {
+  --padding: 50px;
+  --width: 1390px;
+}
+
+.content {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  max-width: var(--width);
+  margin: auto;
+}

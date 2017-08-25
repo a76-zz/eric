@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
-import Header from './Header'
+import Header from '../../components/Layout/Header'
 import s from './Layout.css'
 import { connect } from 'react-redux'
 
-const HomeLayout = ({hubs, children}) => {
+const Layout = ({hubs, children}) => {
   return (
     <div>
       <Header hubs={hubs} />
@@ -26,4 +26,4 @@ function mapStateToProps (state) {
 
 export default connect(
   mapStateToProps
-)(HomeLayout)
+)(Layout)

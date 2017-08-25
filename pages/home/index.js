@@ -1,11 +1,11 @@
 import React, { PropTypes } from 'react'
-import HomeLayout from '../../components/Layout/HomeLayout'
+import Layout from './Layout'
 import s from './styles.css'
 
 const HomePage = () => {
   return (
-    <HomeLayout>
-    </HomeLayout>
+    <Layout>
+    </Layout>
   )
 }
 

@@ -18,6 +18,10 @@
     "page": "./pages/home"
   },
   {
+    "path": "/playback",
+    "page": "./pages/playback"
+  },
+  {
     "id": "hub",
     "path": "/:hubId",
     "page": "./pages/feed"

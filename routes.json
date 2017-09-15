@@ -18,6 +18,7 @@
     "page": "./pages/home"
   },
   {
+    "id": "playback",
     "path": "/playback/:videoId",
     "page": "./pages/playback"
   },

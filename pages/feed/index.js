@@ -8,7 +8,7 @@ const FeedPage = ({params}) => {
 
   return (
     <Layout hubId={hubId} feedId={feedId}>
-      <FeedList hubId={hubId} feedId={feedId} />
+       <FeedList hubId={hubId} feedId={feedId} />
     </Layout>
   )
 }

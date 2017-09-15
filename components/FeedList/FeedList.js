@@ -16,7 +16,7 @@ const FeedList = ({hubId, feedId, hubs, feeds, videos, posters, channels }) => {
       const channel = channels.get(video.get('channel'))
 
       return (
-        <FeedEntity video={video} poster={poster} channel={channel} />
+        <FeedEntity video={video} poster={poster} channel={channel} key={id} />
       )
     })
 
